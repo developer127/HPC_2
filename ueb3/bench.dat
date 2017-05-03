@@ -1,0 +1,116 @@
+( cd Lib ; /Applications/Xcode.app/Contents/Developer/usr/bin/make )
+make[1]: Nothing to be done for `all'.
+( cd Demo ; /Applications/Xcode.app/Contents/Developer/usr/bin/make )
+( cd ../Lib ; /Applications/Xcode.app/Contents/Developer/usr/bin/make )
+make[2]: Nothing to be done for `all'.
+cc    -O3 -I../Include -o hpc_demo hpc_demo.c  ../Lib/libhpc.a -lm
+./hpc_demo 4
+
+========================================
+
+Dimension of matrix    = ( 16, 16)
+Number of matrix entries =      64
+
+Time triplet to full  =         3 ns
+Time Gauss decomp     =         7 ns
+Time Gauss solve      =         1 ns
+result - max( sol ) =     0.0666666666666667 
+./hpc_demo 8
+
+========================================
+
+Dimension of matrix    = ( 64, 64)
+Number of matrix entries =      288
+
+Time triplet to full  =        17 ns
+Time Gauss decomp     =       346 ns
+Time Gauss solve      =        14 ns
+result - max( sol ) =     0.0714432523533523 
+./hpc_demo 12
+
+========================================
+
+Dimension of matrix    = ( 144, 144)
+Number of matrix entries =      672
+
+Time triplet to full  =        79 ns
+Time Gauss decomp     =      3843 ns
+Time Gauss solve      =        62 ns
+result - max( sol ) =     0.0725956157820734 
+./hpc_demo 16
+
+========================================
+
+Dimension of matrix    = ( 256, 256)
+Number of matrix entries =      1216
+
+Time triplet to full  =       221 ns
+Time Gauss decomp     =     19336 ns
+Time Gauss solve      =       184 ns
+result - max( sol ) =     0.0730405059347585 
+./hpc_demo 20
+
+========================================
+
+Dimension of matrix    = ( 400, 400)
+Number of matrix entries =      1920
+
+Time triplet to full  =       564 ns
+Time Gauss decomp     =     70192 ns
+Time Gauss solve      =       411 ns
+result - max( sol ) =     0.0732573691464130 
+./hpc_demo 24
+
+========================================
+
+Dimension of matrix    = ( 576, 576)
+Number of matrix entries =      2784
+
+Time triplet to full  =      1170 ns
+Time Gauss decomp     =    206562 ns
+Time Gauss solve      =       853 ns
+result - max( sol ) =     0.0733790193280279 
+./hpc_demo 28
+
+========================================
+
+Dimension of matrix    = ( 784, 784)
+Number of matrix entries =      3808
+
+Time triplet to full  =      1587 ns
+Time Gauss decomp     =    531629 ns
+Time Gauss solve      =      1846 ns
+result - max( sol ) =     0.0734539975457165 
+./hpc_demo 32
+
+========================================
+
+Dimension of matrix    = ( 1024, 1024)
+Number of matrix entries =      4992
+
+Time triplet to full  =      1857 ns
+Time Gauss decomp     =   1223914 ns
+Time Gauss solve      =      2791 ns
+result - max( sol ) =     0.0735034433720552 
+./hpc_demo 36
+
+========================================
+
+Dimension of matrix    = ( 1296, 1296)
+Number of matrix entries =      6336
+
+Time triplet to full  =      2691 ns
+Time Gauss decomp     =   2459098 ns
+Time Gauss solve      =      4581 ns
+result - max( sol ) =     0.0735377565203193 
+./hpc_demo 40
+
+========================================
+
+Dimension of matrix    = ( 1600, 1600)
+Number of matrix entries =      7840
+
+Time triplet to full  =      3291 ns
+Time Gauss decomp     =   4626323 ns
+Time Gauss solve      =      7015 ns
+result - max( sol ) =     0.0735625353657081 

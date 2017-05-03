@@ -8,10 +8,10 @@ cond_N = cond_M;
 
 for i = 1:size(k,2)
     n = k(i);
-    % M System Matrix für Dirichlet Randbedingungen
+    % M System Matrix f?r Dirichlet Randbedingungen
     M = spdiags([-ones(n,1),2*ones(n,1),-ones(n,1)],-1:1,n,n);
 
-    % N System Matrix für Direchlet am linken Rand und Neumann Randbedingungen
+    % N System Matrix f?r Direchlet am linken Rand und Neumann Randbedingungen
     %   am rechten Rand
     N = M;
     N(n,n-1)=-2;
@@ -28,7 +28,7 @@ hold on
 title('Condition der Steifigkeitsmatritzen')
 xlabel('Gitterpunkte')
 ylabel('Condition Number')
-plot(k,cond_M,'LineWidth',2)
+plot(k,cond_M,'r','LineWidth',2)
 plot(k,cond_N,'LineWidth',2)
-legend({'Dirichlet BC', 'Dirichlet BC left and Neumann BC right'})
+legend('Dirichlet BC', 'Dirichlet BC left and Neumann BC right')
 hold off

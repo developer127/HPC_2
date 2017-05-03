@@ -6,10 +6,10 @@ load coordinates.dat;
 load elements.dat;
 eval('load neumann.dat;','neumann=[];');
 eval('load material.dat;','material=ones(size(elements,1),1);');
-dirichlet = load('dirichletPoisson.dat');
+dirichlet = load('dirichlet - orginalBeispiel.dat');
 
 %*** Refinement
-for k=1:1
+for k=1:4
 %[coordinates,elements,material,dirichlet,neumann] ...
            %= refineR(coordinates,elements,material,dirichlet,neumann);
 [coordinates,elements,material,dirichlet] ...
