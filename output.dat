@@ -1,0 +1,10 @@
+
+========================================
+
+Dimension of matrix    = ( 0, 0)
+Number of matrix entries =      0
+
+Time triplet to full  =         9 ns
+Time Gauss decomp     =         0 ns
+Time Gauss solve      =         0 ns
+result - max( sol ) =     0.0000000000000000 

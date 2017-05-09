@@ -14,7 +14,9 @@ I = -I../Include
 LDLIBS += -lm
 CS = $(LDFLAGS) ../Lib/libhpc.a $(LDLIBS)
 
-all: lib hpc_demo 
+all: lib hpc_demo
+
+run:
 	- ./hpc_demo 4
 	- ./hpc_demo 8
 	- ./hpc_demo 12

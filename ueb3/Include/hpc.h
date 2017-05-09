@@ -20,10 +20,11 @@ typedef struct cs_sparse /* matrix in compressed-row/col or triplet form */
     index nzmax ;     /* maximum number of entries */
     index m ;         /* number of rows */
     index n ;         /* number of columns */
-    index *p ;        /* col/row pointers (size n+1) or col indices (size nzmax) */
+    index *p ;        /* col/row pointers (size n+1)
+                         or col indices (size nzmax) */
     index *ind ;      /* row/col indices, size nzmax */
     double *x ;       /* numerical values, size nzmax */
-    index nz ;        /* # of entries in triplet matrix, 
+    index nz ;        /* # of entries in triplet matrix,
                        * -1 for compressed-col, -2 for compressed-row */
 } cs ;
 
