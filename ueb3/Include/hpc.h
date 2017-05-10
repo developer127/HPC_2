@@ -47,12 +47,16 @@ typedef struct sky_pack  /* sym. matrix in sky storage form */
 void *hpc_realloc (void *p, index n, size_t size, index *ok);
 double hpc_cumsum (index *p, index *c, index n);
 
+index hpc_vecsum(index len, double alpha, const double *x,
+                 double beta, const double *y, double *z);
+
 /* cs format */
 cs *cs_alloc (index m, index n, index nzmax, index values, index typ);
 index cs_realloc (cs *A, index nzmax);
 cs *cs_free (cs *A);
 cs *cs_done (cs *C, void *w, void *x, index ok);
-index cs_gaxpy (const cs *A, const double *x, double *y);
+index cs_gaxpy (const cs *A, double alpha, const double *x,
+                double beta, double *y);
 
 cs *cs_load (FILE *f, index issym); 
 index cs_entry (cs *T, index i, index j, double x);
@@ -78,9 +82,9 @@ sky *sky_done (sky *G, void *w, void *x, index ok);
 index sky_print (const sky *A, index brief);
 sky *sky_compress (const cs *T);
 index sky_gaxpy (const sky *A, const double *x, double *y);
-index sky_cholesky(sky *A); 
-index sky_cholsol(sky *A, double *x); 
- 
+index sky_cholesky(sky *A);
+index sky_cholsol(sky *A, double *x);
+
 #define HPC_MAX(a,b) (((a) > (b)) ? (a) : (b))
 #define HPC_MIN(a,b) (((a) < (b)) ? (a) : (b))
 #define HPC_CSC(A) (A && (A->nz == -1))
