@@ -19,15 +19,9 @@ all: lib hpc_demo
 run:
 	- ./hpc_demo 4
 	- ./hpc_demo 8
-	- ./hpc_demo 12
 	- ./hpc_demo 16
-	- ./hpc_demo 20
-	- ./hpc_demo 24
-	- ./hpc_demo 28
 	- ./hpc_demo 32
-	- ./hpc_demo 36
-	- ./hpc_demo 40
-#	- ./hpc_demo 64
+	- ./hpc_demo 64
 
 # 32 ->
 # Dimension of matrix    = ( 1024, 1024)    ( = 32^2 x 32^2 )
