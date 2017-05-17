@@ -1,73 +1,71 @@
-(cd Demo ; make run )
-make[1]: Entering directory '/home/developer/HPC_2/ueb3/Demo'
 ./hpc_demo 4
 
 ========================================
 
-Dimension of matrix    = ( 16, 16)
+Dimension of matrix      = ( 16, 16)
 Number of matrix entries =      64
 
-Time triplet to full  =         4 ns
-Time Gauss decomp     =        35 ns
-Time Gauss solve      =         5 ns
-result - max( sol ) =   0.06666667 
-Number of steps =       3
-Time cg decomp        =        35 ns
-result - max( sol ) =   0.06666667 
+Time triplet to full     =         3 ns
+Time Gauss decomp        =        36 ns
+Time Gauss solve         =         5 ns
+result - max( sol )      =   0.06666667 
+Number of steps          =       3
+Time cg decomp           =        14 ns
+result - max( sol )      =   0.06666667 
 ./hpc_demo 8
 
 ========================================
 
-Dimension of matrix    = ( 64, 64)
+Dimension of matrix      = ( 64, 64)
 Number of matrix entries =      288
 
-Time triplet to full  =        48 ns
-Time Gauss decomp     =      2584 ns
-Time Gauss solve      =        74 ns
-result - max( sol ) =   0.07144325 
-Number of steps =       7
-Time cg decomp        =      2584 ns
-result - max( sol ) =   0.07143006 
+Time triplet to full     =        49 ns
+Time Gauss decomp        =      2595 ns
+Time Gauss solve         =        85 ns
+result - max( sol )      =   0.07144325 
+Number of steps          =       7
+Time cg decomp           =       132 ns
+result - max( sol )      =   0.07143006 
 ./hpc_demo 16
 
 ========================================
 
-Dimension of matrix    = ( 256, 256)
+Dimension of matrix      = ( 256, 256)
 Number of matrix entries =      1216
 
-Time triplet to full  =      1322 ns
-Time Gauss decomp     =    231189 ns
-Time Gauss solve      =      1461 ns
-result - max( sol ) =   0.07304051 
-Number of steps =      12
-Time cg decomp        =    231189 ns
-result - max( sol ) =   0.07267079 
+Time triplet to full     =      1624 ns
+Time Gauss decomp        =    215427 ns
+Time Gauss solve         =      1336 ns
+result - max( sol )      =   0.07304051 
+Number of steps          =      12
+Time cg decomp           =       983 ns
+result - max( sol )      =   0.07267079 
 ./hpc_demo 32
 
 ========================================
 
-Dimension of matrix    = ( 1024, 1024)
+Dimension of matrix      = ( 1024, 1024)
 Number of matrix entries =      4992
 
-Time triplet to full  =      6508 ns
-Time Gauss decomp     =  11693555 ns
-Time Gauss solve      =     22005 ns
-result - max( sol ) =   0.07350344 
-Number of steps =      22
-Time cg decomp        =  11693555 ns
-result - max( sol ) =   0.07273908 
+Time triplet to full     =      5705 ns
+Time Gauss decomp        =  11354478 ns
+Time Gauss solve         =     24850 ns
+result - max( sol )      =   0.07350344 
+Number of steps          =      22
+Time cg decomp           =      6880 ns
+result - max( sol )      =   0.07273908 
 ./hpc_demo 64
 
 ========================================
 
-Dimension of matrix    = ( 4096, 4096)
+Dimension of matrix      = ( 4096, 4096)
 Number of matrix entries =      20224
 
-Time triplet to full  =     70113 ns
-Time Gauss decomp     = 768927121 ns
-Time Gauss solve      =    375724 ns
-result - max( sol ) =   0.07362804 
-Number of steps =      43
-Time cg decomp        = 768927121 ns
-result - max( sol ) =   0.07266628 
+Time triplet to full     =     48104 ns
+Time Gauss decomp        = 730401781 ns
+Time Gauss solve         =    395439 ns
+result - max( sol )      =   0.07362804 
+Number of steps          =      43
+Time cg decomp           =     52237 ns
+result - max( sol )      =   0.07266628 
 make[1]: Leaving directory '/home/developer/HPC_2/ueb3/Demo'
