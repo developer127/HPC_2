@@ -27,7 +27,7 @@ int main (int argc, char **argv)
     T = cs_lapmat_p1_square (N);
     if (!T) return(1);
 
-    printf("\nDimension of matrix    = ( %g, %g)\n",
+    printf("\nDimension of matrix      = ( %g, %g)\n",
            (double) T->n, (double) T->m);
     printf("Number of matrix entries =      %g\n\n", (double) T->nz);
 
@@ -57,10 +57,10 @@ int main (int argc, char **argv)
     xmax = 0.0;
     for ( j = 0 ; j < n ; j++ ) xmax = HPC_MAX(xmax, b1[j]);
 
-    printf("Time triplet to full  = %9i ns\n", (int) TIME_ELAPSED(0,1) );
-    printf("Time Gauss decomp     = %9i ns\n", (int) TIME_ELAPSED(1,2) );
-    printf("Time Gauss solve      = %9i ns\n", (int) TIME_ELAPSED(2,3) );
-    printf ("result - max( sol ) = %12.8f \n", xmax);
+    printf("Time triplet to full     = %9i ns\n", (int) TIME_ELAPSED(0,1) );
+    printf("Time Gauss decomp        = %9i ns\n", (int) TIME_ELAPSED(1,2) );
+    printf("Time Gauss solve         = %9i ns\n", (int) TIME_ELAPSED(2,3) );
+    printf ("result - max( sol )      = %12.8f \n", xmax);
 
     /* ---------------------- */
     /*  OOForm                */
@@ -75,9 +75,9 @@ int main (int argc, char **argv)
     xmax = 0.0;
     for ( j = 0 ; j < n ; j++ ) xmax = HPC_MAX(xmax, x[j]);
 
-    printf("Number of steps =   %5i\nTime cg decomp        = %9i ns\n",
-           (int) steps, (int) TIME_ELAPSED(1,2) );
-    printf ("result - max( sol ) = %12.8f \n", xmax);
+    printf("Number of steps          =   %5i\nTime cg decomp           = %9i ns\n",
+           (int) steps, (int) TIME_ELAPSED(4,5) );
+    printf ("result - max( sol )      = %12.8f \n", xmax);
 
     /* clear memory */
     gem_free (A);
