@@ -49,6 +49,11 @@ double hpc_cumsum (index *p, index *c, index n);
 
 index hpc_vecsum(index len, double alpha, const double *x,
                  double beta, const double *y, double *z);
+index hpc_veccopy(index len, const double *x, double *y);
+index hpc_vecinitzero(index n, double *x);
+index hpc_vecprint(index len, double *x);
+
+double hpc_dot(index len, const double *x, const double *y);
 
 /* cs format */
 cs *cs_alloc (index m, index n, index nzmax, index values, index typ);
@@ -64,6 +69,8 @@ index cs_print (const cs *A, index brief);
 cs *cs_compress (const cs *T, index typ);
 
 cs *cs_lapmat_p1_square (index m);
+
+index cs_cg(const cs *A, const double *b, double *x);
 
 /* gem format */
 gem *gem_alloc (index n, index m);

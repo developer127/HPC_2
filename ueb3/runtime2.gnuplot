@@ -10,8 +10,7 @@ set ylabel "Time [ns]" font ",16"
 set title "Solving linear system Ax=b" font ",18"
 set key outside
 set pointsize 0.5
-plot "runtime.txt"\
-        using 1:5 with linespoints lt 2 lw 3 title "fulMatrix"
+plot "runtime.dat" every 14::8 using "%*30[^\n]%lf%*2[\n]%*30[^\n]%lf" with linespoints lt 2 lw 3 title "fulMatrix"
 #, \
 #    "benchmarks/bench_blas.data"\
 #       using 1:4 with linespoints lt 3 lw 3 title "tripletFormat"

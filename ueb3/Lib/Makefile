@@ -25,7 +25,7 @@ ifdef OPT
   CFLAGS += -O3 -funroll-loops -DNDEBUG -Wpedantic  # -mfpmath=sse #-march=native #
 endif
 
-CF = $(CFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -fPIC
+CF = $(CFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -fPIC -g
 I = -I../Include
 RANLIB = ranlib
 ARCHIVE = $(AR) $(ARFLAGS)
@@ -36,6 +36,7 @@ AR_TARGET = $(LIBRARY).a
 all: install
 
 HPC = \
+ cs_cg.o \
  cs_compress.o \
  cs_entry.o \
  cs_gaxpy.o \
@@ -50,7 +51,12 @@ HPC = \
  gem_gausssol.o \
  gem_util.o \
  hpc_cumsum.o \
+ hpc_dot.o \
  hpc_malloc.o \
+ hpc_veccopy.o \
+ hpc_vecinitzero.o \
+ hpc_vecprint.o \
+ hpc_vecsum.o \
  sky_cholesky.o  \
  sky_cholsol.o  \
  sky_compress.o  \

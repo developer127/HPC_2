@@ -9,11 +9,13 @@ index cs_gaxpy (const cs *A, double alpha, const double *x,
     if (!A || !x || !y) return (0) ;                /* check inputs */
     if (beta != 0.0) {
         if (beta != 1.0) {
+            n = A->n;
             for (j=0; j<n; ++j) {
                 y[j] *= beta;
             }
         }
     } else {                                /* Init zero if beta is zero */
+        n = A->n;
         for (j=0; j<n; ++j) {
             y[j] = 0.0;
         }

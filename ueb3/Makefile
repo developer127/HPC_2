@@ -19,4 +19,6 @@ purge:
 	( cd Lib ; $(MAKE) purge )
 	( cd Demo ; $(MAKE) purge )
 
+run:
+	(cd Demo ; $(MAKE) run )
 
